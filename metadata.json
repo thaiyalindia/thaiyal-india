@@ -1,0 +1,6 @@
+{
+  "name": "Thaiyal India",
+  "description": "Handcrafted memory quilts, pillows, and toys upcycled from your outgrown garments by skilled women artisans in Chennai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
