@@ -73,7 +73,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
             alt="Cozy memory quilt"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/60 md:bg-gradient-to-r md:from-white/90 md:to-transparent" />
+          <div className="absolute inset-0 bg-white/30 md:bg-gradient-to-r md:from-white/90 md:to-transparent" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">
