@@ -41,14 +41,16 @@ export default function ProductsTab() {
             className={`py-24 px-5 md:px-16 max-w-7xl mx-auto ${idx % 2 === 1 ? 'bg-brand-sand/30' : ''}`}
           >
             <div className={`${idx % 2 === 1 ? 'max-w-7xl mx-auto' : ''} grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center`}>
-              {/* Text block always comes first in the markup, so it always appears above the
-                  image on mobile/tablet (single column). On desktop, reversed products move
-                  the text to column 2 using lg:col-start, without reordering the DOM. */}
-              <div className={`space-y-8 ${reversed ? 'lg:col-start-2 lg:row-start-1' : ''}`}>
+              {/* Heading + description always come first in the markup, so they always appear
+                  above the image on mobile/tablet (single column). On desktop, reversed products
+                  move this block to column 2 using lg:col-start, without reordering the DOM. */}
+              <div className={`space-y-6 ${reversed ? 'lg:col-start-2 lg:row-start-1' : ''}`}>
                 <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary">{product.name}</h2>
                 <p className="text-lg text-brand-charcoal/70 leading-relaxed">{product.longDescription}</p>
-                <div className="pt-4">
-                  <a
+                {/* Button hidden here on mobile/tablet; shown on desktop so it still sits under the
+                    description in the two-column layout. */}
+                <div className="pt-4 hidden lg:block">
+                  
                     href={getProductWhatsAppLink(product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -82,6 +84,20 @@ export default function ProductsTab() {
                   </div>
                 )}
               </div>
+
+              {/* Button shown here on mobile/tablet, after the image. Hidden on desktop since
+                  the copy above already includes it in that layout. */}
+              <div className="pt-2 lg:hidden">
+                
+                  href={getProductWhatsAppLink(product.name)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded font-semibold hover:opacity-90 transition-opacity shadow-md"
+                >
+                  <MessageCircle className="w-5 h-5 text-brand-secondary" />
+                  Enquire via WhatsApp
+                </a>
+              </div>
             </div>
           </section>
         );
@@ -94,7 +110,7 @@ export default function ProductsTab() {
           <p className="text-lg mb-10 opacity-90 max-w-xl mx-auto">
             Every memory is unique. Chat with our designers to find the perfect way to preserve your story. We'll help you decide based on your fabric and vision.
           </p>
-          <a
+          
             href={getWhatsAppLink("Hi Thaiyal India! I'm not sure which product is right for me. Could you help me decide?")}
             target="_blank"
             rel="noopener noreferrer"
