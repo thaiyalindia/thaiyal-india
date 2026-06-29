@@ -40,66 +40,46 @@ export default function ProductsTab() {
             key={product.id}
             className={`py-24 px-5 md:px-16 max-w-7xl mx-auto ${idx % 2 === 1 ? 'bg-brand-sand/30' : ''}`}
           >
-            <div className={`${idx % 2 === 1 ? 'max-w-7xl mx-auto' : ''} grid grid-cols-1 lg:grid-cols-2 gap-16 items-center`}>
-              <div className={reversed ? 'order-2 lg:order-1 space-y-8' : 'space-y-8'}>
-                {!reversed && (
+            <div className={`${idx % 2 === 1 ? 'max-w-7xl mx-auto' : ''} grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center`}>
+              {/* Text block always comes first in the markup, so it always appears above the
+                  image on mobile/tablet (single column). On desktop, reversed products move
+                  the text to column 2 using lg:col-start, without reordering the DOM. */}
+              <div className={`space-y-8 ${reversed ? 'lg:col-start-2 lg:row-start-1' : ''}`}>
+                <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary">{product.name}</h2>
+                <p className="text-lg text-brand-charcoal/70 leading-relaxed">{product.longDescription}</p>
+                <div className="pt-4">
+                  <a
+                    href={getProductWhatsAppLink(product.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded font-semibold hover:opacity-90 transition-opacity shadow-md"
+                  >
+                    <MessageCircle className="w-5 h-5 text-brand-secondary" />
+                    Enquire via WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              {/* Image block always comes second in the markup. */}
+              <div className={reversed ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                {reversed ? (
+                  <div className="aspect-square rounded-xl overflow-hidden shadow-lg relative bg-white p-8 group">
+                    <img
+                      src={product.mainImage}
+                      alt={product.name}
+                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                ) : (
                   <div className="relative group">
                     <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
                       <img
                         src={product.mainImage}
                         alt={product.name}
-                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
-                )}
-                {reversed && (
-                  <>
-                    <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary">{product.name}</h2>
-                    <p className="text-lg text-brand-charcoal/70 leading-relaxed">{product.longDescription}</p>
-                    <div className="pt-4">
-                      <a
-                        href={getProductWhatsAppLink(product.name)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded font-semibold hover:opacity-90 transition-opacity shadow-md"
-                      >
-                        <MessageCircle className="w-5 h-5 text-brand-secondary" />
-                        Enquire via WhatsApp
-                      </a>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <div className={reversed ? 'order-1 lg:order-2' : 'space-y-8'}>
-                {reversed && (
-                  <div className="aspect-square rounded-xl overflow-hidden shadow-lg relative bg-white p-8 group">
-                    <img
-                      src={product.mainImage}
-                      alt={product.name}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                )}
-                {!reversed && (
-                  <>
-                    <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary">{product.name}</h2>
-                    <p className="text-lg text-brand-charcoal/70 leading-relaxed">{product.longDescription}</p>
-                    <div className="pt-4">
-                      <a
-                        href={getProductWhatsAppLink(product.name)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded font-semibold hover:opacity-90 transition-opacity shadow-md"
-                      >
-                        <MessageCircle className="w-5 h-5 text-brand-secondary" />
-                        Enquire via WhatsApp
-                      </a>
-                    </div>
-                  </>
                 )}
               </div>
             </div>
