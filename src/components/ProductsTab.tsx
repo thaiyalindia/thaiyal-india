@@ -110,7 +110,7 @@ export default function ProductsTab() {
           <p className="text-lg mb-10 opacity-90 max-w-xl mx-auto">
             Every memory is unique. Chat with our designers to find the perfect way to preserve your story. We'll help you decide based on your fabric and vision.
           </p>
-          <a
+          
             href={getWhatsAppLink("Hi Thaiyal India! I'm not sure which product is right for me. Could you help me decide?")}
             target="_blank"
             rel="noopener noreferrer"
