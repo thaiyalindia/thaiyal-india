@@ -1,10 +1,6 @@
-import Image from 'next/image';
 import logoImage from '../assets/logo.png';
 
-export function ThaiyalLogo({ className }: { className?: string }) 
+export function ThaiyalLogo({ className = 'w-32 h-auto' }: { className?: string }) 
 {
-  return <Image 
-           src={logoImage} 
-           alt="Thaiyal India" 
-           className={className} />;
+  return <img src={logoImage} alt="Thaiyal India" className={className} />;
 }
