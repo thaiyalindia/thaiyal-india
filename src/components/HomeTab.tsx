@@ -28,31 +28,31 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
       image: homeQuilt,
       filter: 'Memory Quilts',
       cols: 'lg:col-span-8',
-      height: 'h-[300px] md:h-[400px]'
+      height: 'h-[280px] sm:h-[340px] lg:h-[400px]'
     },
     {
       title: 'Memory Pillows',
       subtitle: 'Explore More',
       image: homePillow,
       filter: 'Memory Pillows',
-      cols: 'md:col-span-6 lg:col-span-4',
-      height: 'h-[300px] md:h-[400px]'
+      cols: 'lg:col-span-4',
+      height: 'h-[280px] sm:h-[340px] lg:h-[400px]'
     },
     {
       title: 'Memory Toys',
       subtitle: 'See Toys',
       image: homeToys,
       filter: 'Memory Toys',
-      cols: 'md:col-span-6',
-      height: 'h-[300px] md:h-[350px]'
+      cols: 'sm:col-span-1 lg:col-span-6',
+      height: 'h-[280px] sm:h-[340px]'
     },
     {
       title: 'Custom T-Shirts',
       subtitle: 'Custom Orders',
       image: homeTshirts,
       filter: 'Custom T-Shirts',
-      cols: 'md:col-span-6',
-      height: 'h-[300px] md:h-[350px]'
+      cols: 'sm:col-span-1 lg:col-span-6',
+      height: 'h-[280px] sm:h-[340px]'
     }
   ];
 
@@ -73,7 +73,10 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
             alt="Cozy memory quilt"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/30 md:bg-gradient-to-r md:from-white/90 md:to-transparent" />
+          {/* Mobile: lighter wash than before so the photo doesn't look overexposed/glary, while still keeping enough contrast for the dark heading text */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/10 to-white/30 md:hidden" />
+          <div className="absolute inset-0 bg-white/30 hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent hidden md:block" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">
@@ -114,7 +117,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
           </h2>
           <p className="text-brand-charcoal/60 max-w-xl mx-auto">Every piece is unique, telling a story through fabric and thread.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
           {categories.map((cat) => (
             <div
               key={cat.title}
@@ -139,17 +142,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
 
       {/* Our Story / Impact Section */}
       <section className="py-24 bg-brand-sand/30">
-        <div className="px-5 md:px-16 max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div className="relative w-full">
-            <div className="rounded-2xl overflow-hidden aspect-square relative z-10 shadow-2xl">
-              <img
-                src={homeOurPurpose}
-                alt="Artisan stitching a memory quilt"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="hidden md:block absolute -top-10 -left-10 w-full h-full border-2 border-brand-secondary/20 rounded-2xl -z-0" />
-          </div>
+        <div className="px-5 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div className="space-y-6 text-center md:text-left">
             <span className="label-caps text-brand-secondary block">Our Purpose</span>
             <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary">Threaded with Love &amp; Empowerment</h2>
@@ -167,6 +160,16 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
                 Learn More About Our Impact
               </button>
             </div>
+          </div>
+          <div className="relative w-full">
+            <div className="rounded-2xl overflow-hidden aspect-square relative z-10 shadow-2xl">
+              <img
+                src={homeOurPurpose}
+                alt="Artisan stitching a memory quilt"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="hidden md:block absolute -top-10 -left-10 w-full h-full border-2 border-brand-secondary/20 rounded-2xl -z-0" />
           </div>
         </div>
       </section>
@@ -206,7 +209,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
         <div className="text-center mb-16">
           <h2 className="serif-heading text-2xl md:text-3xl text-brand-primary mb-4">What Our Customers Say</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {homeReviews.map((review) => (
             <div key={review.id} className="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-brand-charcoal/10 space-y-4">
               <div className="flex text-brand-secondary">

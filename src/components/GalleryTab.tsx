@@ -108,31 +108,29 @@ export default function GalleryTab() {
 
       {/* Photo Grid */}
       <section className="max-w-7xl mx-auto px-5 md:px-16 mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {filteredItems.map((item, idx) => (
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {filteredItems.map((item) => (
             <div
               key={item.id}
-              className={`group relative aspect-[4/5] overflow-hidden rounded-xl bg-brand-sand/40 shadow-sm hover:shadow-lg transition-all duration-300 ${
-                idx % 3 !== 0 ? 'md:mt-12' : ''
-              }`}
+              className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-brand-sand/40 shadow-sm hover:shadow-lg transition-all duration-300"
               id={`gallery-item-${item.id}`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                <span className="text-white label-caps mb-2">{item.title}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-6">
+                <span className="text-white label-caps mb-2 text-xs sm:text-[12px]">{item.title}</span>
                 <a
                   href={getWhatsAppLink(item.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-secondary text-white py-2 px-4 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                  className="bg-brand-secondary text-white py-2 px-3 sm:px-4 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-1 sm:gap-2 hover:opacity-90 transition-opacity"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  Enquire on WhatsApp
+                  <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Enquire on WhatsApp</span>
+                  <span className="sm:hidden">Enquire</span>
                 </a>
               </div>
             </div>
@@ -171,13 +169,11 @@ export default function GalleryTab() {
             <h2 className="serif-heading text-2xl md:text-4xl text-brand-primary mb-4">What Our Customers Say</h2>
             <div className="w-24 h-1 bg-brand-secondary mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryReviews.map((review, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+            {galleryReviews.map((review) => (
               <div
                 key={review.id}
-                className={`bg-white p-8 rounded-xl shadow-sm border border-brand-charcoal/10 flex flex-col h-full ${
-                  idx % 2 === 1 ? 'lg:mt-8' : ''
-                }`}
+                className="bg-white p-8 rounded-xl shadow-sm border border-brand-charcoal/10 flex flex-col h-full"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(review.rating)].map((_, i) => (
