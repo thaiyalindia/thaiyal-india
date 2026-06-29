@@ -50,7 +50,7 @@ export default function ProductsTab() {
                 {/* Button hidden here on mobile/tablet; shown on desktop so it still sits under the
                     description in the two-column layout. */}
                 <div className="pt-4 hidden lg:block">
-                  
+                  <a
                     href={getProductWhatsAppLink(product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function ProductsTab() {
               {/* Button shown here on mobile/tablet, after the image. Hidden on desktop since
                   the copy above already includes it in that layout. */}
               <div className="pt-2 lg:hidden">
-                
+                <a
                   href={getProductWhatsAppLink(product.name)}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -110,7 +110,7 @@ export default function ProductsTab() {
           <p className="text-lg mb-10 opacity-90 max-w-xl mx-auto">
             Every memory is unique. Chat with our designers to find the perfect way to preserve your story. We'll help you decide based on your fabric and vision.
           </p>
-          
+          <a
             href={getWhatsAppLink("Hi Thaiyal India! I'm not sure which product is right for me. Could you help me decide?")}
             target="_blank"
             rel="noopener noreferrer"
