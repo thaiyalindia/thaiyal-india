@@ -40,13 +40,13 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-4 lg:gap-8 items-center">
           {navItems.map((item) => (
             <button
               key={item.id}
               id={`nav-link-${item.id}`}
               onClick={() => handleTabClick(item.id)}
-              className={`label-caps pb-1 transition-colors duration-300 cursor-pointer ${
+              className={`label-caps pb-1 transition-colors duration-300 cursor-pointer whitespace-nowrap ${
                 activeTab === item.id
                   ? 'text-brand-secondary border-b-2 border-brand-secondary'
                   : 'text-brand-charcoal/60 hover:text-brand-secondary'

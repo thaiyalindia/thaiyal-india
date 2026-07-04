@@ -38,7 +38,7 @@ export default function AboutTab() {
         </div>
         <div className="relative z-10 text-center px-4">
           <span className="label-caps text-brand-primary bg-white/80 px-4 py-2 rounded-full mb-6 inline-block">Since Thaiyal India</span>
-          <h1 className="serif-heading text-4xl md:text-7xl text-brand-primary drop-shadow-sm">Our Story</h1>
+          <h1 className="serif-heading text-4xl md:text-7xl text-white drop-shadow-lg">Our Story</h1>
         </div>
       </section>
 

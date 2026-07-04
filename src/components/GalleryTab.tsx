@@ -70,11 +70,6 @@ export default function GalleryTab() {
 
   const content = CATEGORY_CONTENT[activeCategory];
 
-  const getWhatsAppLink = (title: string) => {
-    const message = `Hello Thaiyal India! I was exploring your gallery and absolutely loved the "${title}" style. Could you please guide me on how I can order a custom keepsake with a similar design?`;
-    return `https://wa.me/918825648043?text=${encodeURIComponent(message)}`;
-  };
-
   return (
     <div className="animate-fade-in">
 
@@ -121,17 +116,7 @@ export default function GalleryTab() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-6">
-                <span className="text-white label-caps mb-2 text-xs sm:text-[12px]">{item.title}</span>
-                <a
-                  href={getWhatsAppLink(item.title)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-brand-secondary text-white py-2 px-3 sm:px-4 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-1 sm:gap-2 hover:opacity-90 transition-opacity"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  <span className="hidden sm:inline">Enquire on WhatsApp</span>
-                  <span className="sm:hidden">Enquire</span>
-                </a>
+                <span className="text-white label-caps text-xs sm:text-[12px]">{item.category}</span>
               </div>
             </div>
           ))}
