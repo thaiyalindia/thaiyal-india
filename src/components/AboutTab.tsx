@@ -117,7 +117,7 @@ export default function AboutTab() {
               href={getWhatsAppLink("Hi Thaiyal India! I'd love to be part of your story and create a keepsake from my own memories. How can I get started?")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-brand-secondary text-white px-10 py-4 rounded-lg label-caps hover:bg-white hover:text-brand-secondary transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-brand-primary text-white px-10 py-4 rounded-lg label-caps hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-4 h-4" />
               Create Your Keepsake

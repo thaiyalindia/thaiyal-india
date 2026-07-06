@@ -105,9 +105,34 @@ Message: ${formData.message}`;
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5 text-white" />
               WhatsApp Us Directly
             </a>
+
+            {/* Our Presence — moved here from below the map */}
+            <div className="mt-8">
+              <h4 className="label-caps text-brand-charcoal/60 mb-4">Our Presence</h4>
+              <div className="flex items-center gap-6">
+                <a
+                  href="https://www.instagram.com/thaiyal.india?igsh=Y2g4d2hjMTY2cTFz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-brand-charcoal/70 hover:text-brand-secondary transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span className="text-sm font-medium">Instagram</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/share/18CetMxjg1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-brand-charcoal/70 hover:text-brand-secondary transition-colors"
+                >
+                  <Facebook className="w-5 h-5" />
+                  <span className="text-sm font-medium">Facebook</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -193,45 +218,6 @@ Message: ${formData.message}`;
           referrerPolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps?q=Kurinji+Nagar+7th+Street,+Polepettai+West,+Tuticorin+628002&output=embed"
         />
-      </section>
-
-      {/* Our Presence — WhatsApp CTA + social links, neutral background instead of burgundy bar */}
-      <section className="bg-brand-sand/30 border-t border-brand-charcoal/10 py-14">
-        <div className="px-5 md:px-16 max-w-7xl mx-auto flex flex-col items-center gap-8 text-center">
-          <a
-            href={getWhatsAppLink("Hi Thaiyal India! I'd like to get in touch about a custom keepsake.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-brand-primary text-white px-10 py-4 rounded-lg label-caps hover:opacity-90 transition-opacity shadow-md"
-          >
-            <MessageCircle className="w-5 h-5 text-white" />
-            WhatsApp Us
-          </a>
-
-          <div className="space-y-2">
-            <p className="label-caps text-brand-charcoal/50">Our Presence</p>
-            <div className="flex items-center justify-center gap-6">
-              <a
-                href="https://www.instagram.com/thaiyal.india?igsh=Y2g4d2hjMTY2cTFz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-brand-charcoal/70 hover:text-brand-secondary transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-                <span className="text-sm font-medium">Instagram</span>
-              </a>
-              <a
-                href="https://www.facebook.com/share/18CetMxjg1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-brand-charcoal/70 hover:text-brand-secondary transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-                <span className="text-sm font-medium">Facebook</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </section>
 
     </div>
