@@ -38,7 +38,7 @@ export default function AboutTab() {
         </div>
         <div className="relative z-10 text-center px-4">
           <span className="label-caps text-brand-primary bg-white/80 px-4 py-2 rounded-full mb-6 inline-block">Since Thaiyal India</span>
-          <h1 className="serif-heading text-4xl md:text-7xl text-brand-primary drop-shadow-sm">Our Story</h1>
+          <h1 className="serif-heading text-4xl md:text-7xl text-white drop-shadow-lg">Our Story</h1>
         </div>
       </section>
 
@@ -117,7 +117,7 @@ export default function AboutTab() {
               href={getWhatsAppLink("Hi Thaiyal India! I'd love to be part of your story and create a keepsake from my own memories. How can I get started?")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-brand-secondary text-white px-10 py-4 rounded-lg label-caps hover:bg-white hover:text-brand-secondary transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-brand-primary text-white px-10 py-4 rounded-lg label-caps hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-4 h-4" />
               Create Your Keepsake

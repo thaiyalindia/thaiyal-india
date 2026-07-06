@@ -100,7 +100,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
               </a>
               <button
                 onClick={() => { setActiveTab(Tab.Gallery); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="bg-transparent border border-brand-secondary text-brand-secondary px-8 py-4 rounded-lg label-caps hover:bg-brand-secondary/5 transition-all inline-flex items-center cursor-pointer"
+                className="bg-brand-primary text-white px-8 py-4 rounded-lg label-caps hover:opacity-90 transition-all inline-flex items-center gap-2 cursor-pointer font-semibold shadow-sm"
               >
                 View Gallery
               </button>
