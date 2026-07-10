@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart as HeartIcon, Users, BookOpen, MessageCircle } from 'lucide-react';
 import { getWhatsAppLink } from '../whatsapp';
-import aboutBackground from '../assets/about/about_bg.jpg';
+import aboutBackground from '../assets/about/about_background.jpg';
 import aboutImage from '../assets/about/about.jpg';
 
 export default function AboutTab() {
@@ -32,13 +32,15 @@ export default function AboutTab() {
           <img
             src={aboutBackground}
             alt="Thaiyal India artisan at work"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-brand-primary/10 backdrop-blur-[2px]" />
+          {/* Overlay keeps text readable while letting the image show clearly */}
+          <div className="absolute inset-0 bg-white/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-white/10" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <span className="label-caps text-brand-primary bg-white/80 px-4 py-2 rounded-full mb-6 inline-block">Since Thaiyal India</span>
-          <h1 className="serif-heading text-4xl md:text-7xl text-white drop-shadow-lg">Our Story</h1>
+          <span className="label-caps text-brand-primary bg-white/90 px-4 py-2 rounded-full mb-6 inline-block shadow-sm">Since Thaiyal India</span>
+          <h1 className="serif-heading text-4xl md:text-7xl text-brand-primary drop-shadow-lg">Our Story</h1>
         </div>
       </section>
 

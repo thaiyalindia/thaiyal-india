@@ -176,7 +176,7 @@ Message: ${formData.message}`;
                 <option value="Memory Quilts">Memory Quilts</option>
                 <option value="Memory Toys">Memory Toys</option>
                 <option value="Memory Pillows">Memory Pillows</option>
-                <option value="Custom T-Shirts">Custom T-Shirts</option>
+                <option value="Memory T-Shirts">Memory T-Shirts</option>
               </select>
             </div>
             <div>

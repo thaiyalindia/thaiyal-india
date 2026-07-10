@@ -47,7 +47,7 @@ import t33 from './assets/gallery/toys/t33.jpg';
 import t34 from './assets/gallery/toys/t34.jpg';
 import t35 from './assets/gallery/toys/t35.jpg';
 
-// Gallery - Custom T-Shirts (36-44)
+// Gallery - Memory T-Shirts (36-44)
 import s36 from './assets/gallery/tshirts/s36.jpg';
 import s37 from './assets/gallery/tshirts/s37.jpg';
 import s38 from './assets/gallery/tshirts/s38.jpg';
@@ -88,10 +88,10 @@ export const products: Product[] = [
   },
   {
     id: 'shirts',
-    name: 'Custom T-Shirts',
-    category: 'Custom T-Shirts',
+    name: 'Memory T-Shirts',
+    category: 'Memory T-Shirts',
     description: 'Modern apparel accented with meaningful patchwork, perfect for gifting or personal style.',
-    longDescription: 'Perfect for gifting or personal style. We highlight precious fabric pieces through expert embroidery and patchwork, giving old clothes a new life as an upcycled custom t-shirt. Each shirt is a wearable piece of art that tells a unique personal story through colour and texture.',
+    longDescription: 'Perfect for gifting or personal style. We highlight precious fabric pieces through expert embroidery and patchwork, giving old clothes a new life as an upcycled memory t-shirt. Each shirt is a wearable piece of art that tells a unique personal story through colour and texture.',
     mainImage: productTshirts,
     images: [s36]
   }
@@ -139,16 +139,16 @@ export const galleryItems: GalleryItem[] = [
   { id: 't34', title: 'Memory Toy', category: 'Memory Toys', image: t34 },
   { id: 't35', title: 'Memory Toy', category: 'Memory Toys', image: t35 },
 
-  // Custom T-Shirts
-  { id: 's36', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s36 },
-  { id: 's37', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s37 },
-  { id: 's38', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s38 },
-  { id: 's39', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s39 },
-  { id: 's40', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s40 },
-  { id: 's41', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s41 },
-  { id: 's42', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s42 },
-  { id: 's43', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s43 },
-  { id: 's44', title: 'Custom T-Shirt', category: 'Custom T-Shirts', image: s44 }
+  // Memory T-Shirts
+  { id: 's36', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s36 },
+  { id: 's37', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s37 },
+  { id: 's38', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s38 },
+  { id: 's39', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s39 },
+  { id: 's40', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s40 },
+  { id: 's41', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s41 },
+  { id: 's42', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s42 },
+  { id: 's43', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s43 },
+  { id: 's44', title: 'Memory T-Shirt', category: 'Memory T-Shirts', image: s44 }
 ];
 
 export const homeReviews: Review[] = [
