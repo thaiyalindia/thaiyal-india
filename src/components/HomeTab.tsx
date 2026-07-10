@@ -47,10 +47,10 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
       height: 'h-[280px] sm:h-[340px]'
     },
     {
-      title: 'Custom T-Shirts',
+      title: 'Memory T-Shirts',
       subtitle: 'Custom Orders',
       image: homeTshirts,
-      filter: 'Custom T-Shirts',
+      filter: 'Memory T-Shirts',
       cols: 'sm:col-span-1 lg:col-span-6',
       height: 'h-[280px] sm:h-[340px]'
     }
@@ -71,13 +71,11 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
           <img
             src={homeHero}
             alt="Cozy memory quilt"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
-          {/* Below lg: lighter gradient so photo stays vivid at tablet/half-desktop widths */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/10 to-white/25 lg:hidden" />
-          {/* lg+: side-weighted gradient for the two-column hero layout */}
-          <div className="absolute inset-0 bg-white/20 hidden lg:block" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/10 to-transparent hidden lg:block" />
+          {/* Heavy white wash — quilt shows as a very subtle texture, text is clearly readable
+              on mobile, tablet, half-desktop, and full desktop */}
+          <div className="absolute inset-0 bg-white/80" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">

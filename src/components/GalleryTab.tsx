@@ -28,10 +28,10 @@ const CATEGORY_CONTENT: Record<string, { title: string; subtitle: string; cta: s
     cta: 'Custom Memory Toy',
     ctaDescription: 'Have a specific design in mind? Let\u2019s create a unique keepsake together.'
   },
-  'Custom T-Shirts': {
-    title: 'Custom T-Shirts',
+  'Memory T-Shirts': {
+    title: 'Memory T-Shirts',
     subtitle: 'Wearable pieces of art featuring expert embroidery and traditional Indian textiles. Each shirt is a unique blend of modern comfort and artisanal heritage.',
-    cta: 'Ready to start your custom t-shirt?',
+    cta: 'Ready to start your memory t-shirt?',
     ctaDescription: 'Send us photos of your clothes and we\u2019ll help you design a masterpiece. Our artisans are ready to bring your memories to life.'
   }
 };
@@ -39,7 +39,7 @@ const CATEGORY_CONTENT: Record<string, { title: string; subtitle: string; cta: s
 export default function GalleryTab() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Memory Quilts', 'Memory Pillows', 'Memory Toys', 'Custom T-Shirts'];
+  const categories = ['All', 'Memory Quilts', 'Memory Pillows', 'Memory Toys', 'Memory T-Shirts'];
 
   // Interleave items across categories (round-robin) so "All" shows a mixed feed
   // instead of all quilts, then all pillows, then all toys, etc.
