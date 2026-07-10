@@ -10,6 +10,7 @@ import ContactTab from './components/ContactTab';
 import ShippingPolicyTab from './components/ShippingPolicyTab';
 import ReturnsPolicyTab from './components/ReturnsPolicyTab';
 import PrivacyPolicyTab from './components/PrivacyPolicyTab';
+import ThankYouTab from './components/ThankYouTab';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>(Tab.Home);
@@ -39,13 +40,15 @@ export default function App() {
 
         {activeTab === Tab.About && <AboutTab />}
 
-        {activeTab === Tab.Contact && <ContactTab />}
+        {activeTab === Tab.Contact && <ContactTab setActiveTab={setActiveTab} />}
 
         {activeTab === Tab.Shipping && <ShippingPolicyTab />}
 
         {activeTab === Tab.Returns && <ReturnsPolicyTab />}
 
         {activeTab === Tab.Privacy && <PrivacyPolicyTab />}
+
+        {activeTab === Tab.ThankYou && <ThankYouTab setActiveTab={setActiveTab} />}
       </main>
 
       <Footer setActiveTab={setActiveTab} />

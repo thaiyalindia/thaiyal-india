@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { getWhatsAppLink } from '../whatsapp';
+import { Tab } from '../types';
 
 const FORMSPREE_URL = 'https://formspree.io/f/xpqgjwvy';
 
-export default function ContactTab() {
+interface ContactTabProps {
+  setActiveTab: (tab: Tab) => void;
+}
+
+export default function ContactTab({ setActiveTab }: ContactTabProps) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     productInterest: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const getWhatsAppMessageUrl = () => {
     const text = `Hi Thaiyal India! My name is ${formData.name}.
@@ -36,11 +40,13 @@ Message: ${formData.message}`;
         }),
       });
     } catch (_) {
-      // Silent fail — WhatsApp fallback below always opens regardless
+      // Silent fail — WhatsApp also opens regardless
     }
-    setSubmitted(true);
-    // Also open WhatsApp so the customer can chat directly
+    // Open WhatsApp so the customer can chat directly
     window.open(getWhatsAppMessageUrl(), '_blank');
+    // Navigate to Thank You page
+    setActiveTab(Tab.ThankYou);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -138,21 +144,6 @@ Message: ${formData.message}`;
 
         {/* Right Column: Contact Form */}
         <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl shadow-brand-primary/5 border border-brand-charcoal/5">
-          {submitted ? (
-            <div className="text-center py-12 space-y-4">
-              <div className="w-16 h-16 bg-brand-secondary/10 rounded-full flex items-center justify-center mx-auto">
-                <MessageCircle className="w-8 h-8 text-brand-secondary" />
-              </div>
-              <h3 className="serif-heading text-xl text-brand-primary">Message Sent!</h3>
-              <p className="text-brand-charcoal/70">We've received your message and WhatsApp should have opened for a quick chat. We'll be in touch soon.</p>
-              <button
-                onClick={() => { setSubmitted(false); setFormData({ name: '', phone: '', productInterest: '', message: '' }); }}
-                className="label-caps text-brand-secondary border-b border-brand-secondary pb-1 hover:opacity-70 transition-opacity cursor-pointer"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="label-caps text-brand-charcoal/60 mb-2 block">Full Name</label>
@@ -205,7 +196,6 @@ Message: ${formData.message}`;
               Send Message
             </button>
           </form>
-          )}
         </div>
       </section>
 
