@@ -7,6 +7,7 @@ export enum Tab {
   Shipping = 'shipping',
   Returns = 'returns',
   Privacy = 'privacy',
+  ThankYou = 'thankyou',
 }
 
 export interface Product {
