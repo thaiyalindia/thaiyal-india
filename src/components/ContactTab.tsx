@@ -17,14 +17,6 @@ export default function ContactTab({ setActiveTab }: ContactTabProps) {
     message: ''
   });
 
-  const getWhatsAppMessageUrl = () => {
-    const text = `Hi Thaiyal India! My name is ${formData.name}.
-Phone: ${formData.phone}
-Product Interest: ${formData.productInterest || 'N/A'}
-Message: ${formData.message}`;
-    return `https://wa.me/918825648043?text=${encodeURIComponent(text)}`;
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Submit to Formspree so you receive an email notification
@@ -40,10 +32,8 @@ Message: ${formData.message}`;
         }),
       });
     } catch (_) {
-      // Silent fail — WhatsApp also opens regardless
+      // Silent fail
     }
-    // Open WhatsApp so the customer can chat directly
-    window.open(getWhatsAppMessageUrl(), '_blank');
     // Navigate to Thank You page
     setActiveTab(Tab.ThankYou);
     window.scrollTo({ top: 0, behavior: 'smooth' });
