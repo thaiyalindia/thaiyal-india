@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart as HeartIcon, Users, BookOpen, MessageCircle } from 'lucide-react';
 import { getWhatsAppLink } from '../whatsapp';
-import aboutBackground from '../assets/about/about_background.jpg';
+import aboutBackground from '../assets/about/about_bg.jpg';
 import aboutImage from '../assets/about/about.jpg';
 
 export default function AboutTab() {
