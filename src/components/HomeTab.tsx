@@ -75,7 +75,7 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
           />
           {/* Heavy white wash — quilt shows as a very subtle texture, text is clearly readable
               on mobile, tablet, half-desktop, and full desktop */}
-          <div className="absolute inset-0 bg-white/80" />
+          <div className="absolute inset-0 bg-white/75" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">
