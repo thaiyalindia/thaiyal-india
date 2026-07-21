@@ -5,7 +5,7 @@ import { getWhatsAppLink as getGenericWhatsAppLink } from '../whatsapp';
 
 const CATEGORY_CONTENT: Record<string, { title: string; subtitle: string; cta: string; ctaDescription: string }> = {
   All: {
-    title: 'Stories Stitched in Every Quilt',
+    title: 'Your Story, Our Stitch',
     subtitle: 'A look at some of our most cherished creations. Each piece is a hand-woven tapestry of memories, designed to last for generations.',
     cta: 'Ready to start your keepsake?',
     ctaDescription: 'Send us photos of your clothes and we\u2019ll help you design a masterpiece. Our artisans are ready to bring your memories to life.'
