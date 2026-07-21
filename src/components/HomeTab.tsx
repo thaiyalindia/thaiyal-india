@@ -3,7 +3,7 @@ import { Tab } from '../types';
 import { homeReviews } from '../data';
 import { ArrowRight, ShoppingBasket, Truck, Sparkles, Star } from 'lucide-react';
 import { getWhatsAppLink } from '../whatsapp';
-import homeHero from '../assets/home/hero_background.png';
+import homeHero from '../assets/home/home_hero_background.png';
 import homeQuilt from '../assets/home/quilt.jpg';
 import homePillow from '../assets/home/pillow.jpg';
 import homeToys from '../assets/home/toys.jpg';
