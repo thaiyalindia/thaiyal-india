@@ -3,7 +3,7 @@ import { Tab } from '../types';
 import { homeReviews } from '../data';
 import { ArrowRight, ShoppingBasket, Truck, Sparkles, Star } from 'lucide-react';
 import { getWhatsAppLink } from '../whatsapp';
-import homeHero from '../assets/home/hero_background.jpg';
+import homeHero from '../assets/home/home_hero_background.jpg';
 import homeQuilt from '../assets/home/quilt.jpg';
 import homePillow from '../assets/home/pillow.jpg';
 import homeToys from '../assets/home/toys.jpg';
@@ -73,9 +73,11 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
             alt="Cozy memory quilt"
             className="w-full h-full object-cover object-top"
           />
-          {/* Heavy white wash — quilt shows as a very subtle texture, text is clearly readable
-              on mobile, tablet, half-desktop, and full desktop */}
-          <div className="absolute inset-0 bg-white/75" />
+          {/* Below lg: softer gradient for mobile/tablet */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/10 to-white/30 lg:hidden" />
+          {/* lg+: side-weighted gradient for the two-column layout */}
+          <div className="absolute inset-0 bg-white/20 hidden lg:block" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/15 to-transparent hidden lg:block" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">
