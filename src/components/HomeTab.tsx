@@ -73,11 +73,8 @@ export default function HomeTab({ setActiveTab, setProductFilter }: HomeTabProps
             alt="Cozy memory quilt"
             className="w-full h-full object-cover object-top"
           />
-          {/* Below lg: softer gradient for mobile/tablet */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/10 to-white/30 lg:hidden" />
-          {/* lg+: side-weighted gradient for the two-column layout */}
-          <div className="absolute inset-0 bg-white/20 hidden lg:block" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/15 to-transparent hidden lg:block" />
+          {/* Strong white wash — image shows as a subtle background, text clearly readable everywhere */}
+          <div className="absolute inset-0 bg-white/60 md:bg-gradient-to-r md:from-white/90 md:to-transparent" />
         </div>
 
         <div className="relative z-10 px-5 md:px-16 max-w-7xl mx-auto w-full py-16">
