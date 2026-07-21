@@ -46,7 +46,7 @@ export default function PrivacyPolicyTab() {
         <div>
           <h2 className="font-bold text-brand-primary text-lg mb-3">4. Photos &amp; Uploaded Materials</h2>
           <p>
-            Any photos, clothing images, or other materials you upload are used solely to create the product you have ordered. We do not use your uploaded photos or materials for any other purpose without your permission.
+            Any photos, clothing images, or other materials you upload are used solely to create the product you have ordered. We do not use your uploaded photos or materials for any other purpose without your consent.
           </p>
         </div>
 
